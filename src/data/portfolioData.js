@@ -253,14 +253,17 @@ export const competitiveProgramming = {
 };
 
 /* Timeline for the Journey section. `type` picks the icon. */
+/* Journey section. Items are grouped by `type` (experience / education) and shown
+   in the order listed here — newest first. `grade` and `desc` are optional. */
 export const journey = [
+  // ── Experience ───────────────────────────────────────────
   {
-    type: "education",
-    title: "B.Tech — Computer Science And Engineering",
-    org: "Madan Mohan Malaviya University Of Technology",
+    type: "experience",
+    title: "Head of Operations",
+    org: "Coders and Developers Club · MMMUT",
     period: "2024 — Present",
-    desc: "Coursework in data structures and algorithms, DBMS, Object-oriented programming in Java, Computer Networks and Operating System.",
-    tags: ["DSA", "OOP", "DBMS"],
+    desc: "Lead the club's operations — planning and running coding events, workshops and hackathons, coordinating the core team and volunteers, and keeping every event on schedule from first announcement to final wrap-up.",
+    tags: ["Leadership", "Event operations", "Team coordination"],
   },
   {
     type: "experience",
@@ -270,6 +273,35 @@ export const journey = [
     desc: "Building with teams in university clubs and at hackathons, and on my own — taking ideas from a rough plan to deployed, tested apps like Tripzy and LLMux.",
     tags: ["Hackathons", "Team projects", "Full-stack"],
   },
+
+  // ── Education ────────────────────────────────────────────
+  {
+    type: "education",
+    title: "B.Tech — Computer Science and Engineering",
+    org: "Madan Mohan Malaviya University of Technology, Gorakhpur",
+    period: "2024 — Present",
+    desc: "Coursework in Data Structures and Algorithms, DBMS, Object-Oriented Programming in Java, Computer Networks and Operating Systems.",
+    tags: ["DSA", "OOP", "DBMS", "CN", "OS"],
+  },
+  {
+    type: "education",
+    title: "Class 12 — Senior Secondary",
+    org: "Maharana Pratap Education Centre, Kanpur",
+    period: "2022 — 2023",
+    grade: "94.6%",
+  },
+  {
+    type: "education",
+    title: "Class 10 — Secondary",
+    org: "Maharana Pratap Education Centre, Kanpur",
+    period: "2020 — 2021",
+    grade: "93%",
+  },
+];
+
+export const journeyGroups = [
+  { type: "experience", label: "Experience" },
+  { type: "education", label: "Education" },
 ];
 
 export const journeyIcons = {
