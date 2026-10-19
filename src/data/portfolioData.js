@@ -31,7 +31,8 @@ export const profile = {
   status: "Available for internships & projects",
   email: "sanskritichandel2005@gmail.com",
   resumeUrl: "/resume.pdf", // TODO: put resume.pdf inside /public
-  photo: "/sanskriti.webp", // transparent cutout, shown in the hero
+  photo: "/sanskriti-portrait.webp", // transparent cutout, shown in the hero
+  photoSize: { width: 864, height: 1126 }, // intrinsic size of the file above
   greeting: "Hi, There!",
   intro:
     "I’m a software developer who adapts to any stack and turns ideas into fast, responsive, scaled and thoughtfully designed products.",
@@ -86,21 +87,21 @@ export const skillGroups = [
     icon: Terminal,
     accent: "violet",
     blurb: "The languages I think and build in.",
-    items: ["JavaScript", "TypeScript", "Python", "C++", "Java", "SQL"],
+    items: ["JavaScript", "C++", "Java", "SQL"],
   },
   {
     title: "Frontend",
     icon: Code2,
     accent: "cyan",
     blurb: "Fast, responsive and accessible interfaces.",
-    items: ["React", "Vite", "Tailwind CSS", "Zustand", "TanStack Query", "Recharts"],
+    items: ["React", "Vite", "Tailwind CSS", "Context API", "Zustand", "TanStack Query"],
   },
   {
     title: "Backend & Realtime",
     icon: Server,
     accent: "emerald",
     blurb: "APIs and live, event-driven systems.",
-    items: ["Node.js", "Express", "Socket.IO", "WebSockets", "Zod", "REST APIs"],
+    items: ["Node.js", "Express", "Socket.IO", "WebSockets", "Zod", "REST APIs", "GraphQL"],
   },
   {
     title: "Databases & Caching",

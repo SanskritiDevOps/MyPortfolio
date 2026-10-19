@@ -135,12 +135,17 @@ export default function Hero() {
           <div aria-hidden className="absolute left-1/2 top-[10%] aspect-square w-[72%] -translate-x-1/2 rounded-full border border-white/10" />
           <div aria-hidden className="absolute left-1/2 top-[4%] aspect-square w-[86%] -translate-x-1/2 rounded-full border border-dashed border-white/6" />
 
-          <div className="absolute inset-0 overflow-hidden [mask-image:linear-gradient(to_bottom,black_72%,transparent)]">
+          {/* wider than the column so the portrait's sides are never clipped; bottom fades into the page */}
+          <div className="absolute inset-y-0 -inset-x-[25%] overflow-hidden [mask-image:linear-gradient(to_bottom,black_80%,transparent)]">
+            {/* head-to-waist portrait, shown uncropped; width/height set the aspect ratio before it loads.
+                The left fade softens where the original photo's hair was cropped straight. */}
             <img
               src={profile.photo}
               alt={`Portrait of ${profile.name}`}
+              width={profile.photoSize.width}
+              height={profile.photoSize.height}
               fetchPriority="high"
-              className="absolute left-1/2 top-0 h-[138%] w-auto max-w-none -translate-x-1/2 select-none"
+              className="absolute bottom-0 left-1/2 h-full w-auto max-w-none -translate-x-1/2 select-none [mask-image:linear-gradient(to_right,transparent,black_9%)]"
               draggable="false"
             />
           </div>
