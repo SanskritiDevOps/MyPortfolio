@@ -46,8 +46,8 @@ export default function Skills() {
         <SectionHeading
           index="02"
           eyebrow="Skills & Stack"
-          title="Tools I reach for."
-          description="The languages, frameworks and platforms I use to turn an idea or a design into a working product."
+          title="Tech I know."
+          description="The languages, frameworks and infrastructure I use to build full-stack, real-time and AI-powered products."
         />
       </div>
 
@@ -61,7 +61,7 @@ export default function Skills() {
         initial="hidden"
         whileInView="show"
         viewport={viewportOnce}
-        className="mx-auto mt-14 grid max-w-6xl gap-5 px-5 sm:grid-cols-2 sm:px-8 lg:grid-cols-4"
+        className="mx-auto mt-14 grid max-w-6xl gap-5 px-5 sm:grid-cols-2 sm:px-8 lg:grid-cols-3"
       >
         {skillGroups.map((group) => {
           const accent = ACCENTS[group.accent];

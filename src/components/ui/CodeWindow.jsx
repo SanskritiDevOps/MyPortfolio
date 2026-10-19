@@ -30,7 +30,7 @@ const FILES = {
     [["const ", K], ["developer", V], [" = {", D]],
     [["  name", P], [": ", D], str(profile.name), [",", D]],
     [["  role", P], [": ", D], str(profile.role), [",", D]],
-    [["  stack", P], [": [", D], ...list(["React", "Java", "Tailwind"]), ["],", D]],
+    [["  stack", P], [": [", D], ...list(profile.codeStack), ["],", D]],
     [["  focus", P], [": ", D], str(profile.focus), [",", D]],
     [["  available", P], [": ", D], ["true", L], [",", D]],
     [["};", D]],

@@ -2,59 +2,64 @@
    PORTFOLIO CONTENT
    Everything the site displays lives here. Edit this file to update
    your portfolio. Lines marked TODO still hold placeholder content.
+   Live-data usernames (GitHub, LeetCode, Codeforces…) live in
+   src/config/profileConfig.js.
 ================================================================ */
 
 import {
   Code2,
   Terminal,
-  Wrench,
+  Server,
   Database,
-  Layers,
-  Gauge,
-  Palette,
+  Cloud,
+  FlaskConical,
+  Puzzle,
+  ShieldCheck,
+  Shuffle,
   GraduationCap,
   Briefcase,
 } from "lucide-react";
 
 export const profile = {
   name: "Sanskriti Singh",
-  shortName: "sanskriti",
+  shortName: "Sanskriti",
   role: "Software Developer",
   // Rotates under the headline in the hero.
-  roles: ["Software Developer", "Frontend Developer", "Java Programmer", "UI Enthusiast"],
+  roles: ["Software Developer", "Full-Stack Developer", "Real-time Systems Builder", "Competitive Programmer"],
   tagline:
     "Turning creativity into code to build products that scale, perform and make an impact.",
   status: "Available for internships & projects",
-  email: "your.email@example.com", // TODO: your real email
+  email: "sanskritichandel2005@gmail.com",
   resumeUrl: "/resume.pdf", // TODO: put resume.pdf inside /public
   photo: "/sanskriti.webp", // transparent cutout, shown in the hero
   greeting: "Hi, There!",
   intro:
-    "I'm a software developer who turns ideas into fast, responsive and thoughtfully designed web experiences — with React, Java and an eye for detail.",
-  focus: "clean UI + solid logic",
+    "I’m a software developer who adapts to any stack and turns ideas into fast, responsive, scaled and thoughtfully designed products.",
+  focus: "Think + Build + Optimize",
+  heroChips: ["React", "Node.js", "PostgreSQL"], // floating tags around the hero photo
+  codeStack: ["React", "Node.js", "Socket.IO"], // `stack` line in the About code window
 };
 
 export const about = {
-  // TODO: personalise these paragraphs.
   bio: [
-    "I'm a software developer who loves the space where design meets engineering. I enjoy taking an idea from a rough sketch to a polished, responsive product that people genuinely enjoy using.",
-    "My toolkit centres on React, Tailwind CSS and Java. I care about readable code, accessible interfaces and the small details — the transitions, spacing and states that make software feel effortless.",
+    "I'm a software developer driven by problems worth solving. I dig into the challenge, design the approach, and build solutions that hold up in the real world.",
+    "I build across the stack — React on the front end, Node.js, PostgreSQL and Redis behind it — and use Java and C++ for problem solving, adapting quickly to whatever a project needs. Clean code, sound logic and careful attention to detail are how I make sure what I build stays reliable.",
   ],
   highlights: [
     {
-      icon: Layers,
-      title: "Component-driven",
-      text: "Modular, reusable building blocks that keep codebases easy to grow.",
+      icon: Puzzle,
+      title: "Problem Solver",
+      text: "Breaks complex challenges into clear, logical steps and finds the right fix.",
     },
     {
-      icon: Gauge,
-      title: "Performance-minded",
-      text: "Lean bundles, smooth interactions and fast first paints.",
+      icon: ShieldCheck,
+      title: "Reliability-focused",
+      text: "Clean, tested code that handles edge cases and holds up in production.",
     },
     {
-      icon: Palette,
-      title: "Design-literate",
-      text: "Comfortable in Figma and fluent in turning mockups into pixels.",
+      icon: Shuffle,
+      title: "Stack-flexible",
+      text: "Adapts quickly to new languages, frameworks and tools as projects demand.",
     },
   ],
 };
@@ -71,169 +76,198 @@ export const navLinks = [
 
 export const socialLinks = [
   { id: "github", label: "GitHub", href: "https://github.com/SanskritiDevOps" },
-  { id: "linkedin", label: "LinkedIn", href: "" }, // TODO: your LinkedIn URL (hidden while empty)
+  { id: "linkedin", label: "LinkedIn", href: "https://www.linkedin.com/in/sanskriti-singh-810389325/" },
 ];
 
+/* "Tech I know" — `accent` ∈ cyan | violet | emerald. */
 export const skillGroups = [
-  {
-    title: "Frontend",
-    icon: Code2,
-    accent: "cyan",
-    blurb: "Interfaces that are responsive, accessible and fast.",
-    items: ["React.js", "Tailwind CSS", "HTML5", "CSS3", "Responsive Design"],
-  },
   {
     title: "Languages",
     icon: Terminal,
     accent: "violet",
     blurb: "The languages I think and build in.",
-    items: ["Java", "JavaScript", "SQL"],
+    items: ["JavaScript", "TypeScript", "Python", "C++", "Java", "SQL"],
   },
   {
-    title: "Backend & Data",
+    title: "Frontend",
+    icon: Code2,
+    accent: "cyan",
+    blurb: "Fast, responsive and accessible interfaces.",
+    items: ["React", "Vite", "Tailwind CSS", "Zustand", "TanStack Query", "Recharts"],
+  },
+  {
+    title: "Backend & Realtime",
+    icon: Server,
+    accent: "emerald",
+    blurb: "APIs and live, event-driven systems.",
+    items: ["Node.js", "Express", "Socket.IO", "WebSockets", "Zod", "REST APIs"],
+  },
+  {
+    title: "Databases & Caching",
     icon: Database,
-    accent: "emerald",
-    blurb: "Storing, querying and shaping data.",
-    items: ["SQL", "Relational Databases"], // TODO: add Node.js, Express, etc. if you use them
-  },
-  {
-    title: "Tools & Platforms",
-    icon: Wrench,
     accent: "cyan",
-    blurb: "Shipping, collaborating and designing.",
-    items: ["Git & GitHub", "Figma", "Vercel", "Vite", "VS Code"],
+    blurb: "Modelling, querying and caching data.",
+    items: ["PostgreSQL", "Prisma ORM", "Redis"],
   },
-];
-
-/* Project categories drive the filter tabs. `accent` ∈ cyan | violet | emerald.
-   `featured: true` makes a card span two columns in the bento grid.
-   Leave `github` or `live` empty to hide that link. */
-export const projects = [
   {
-    title: "Portfolio v2",
-    category: "UI / Creative",
-    year: "2026",
+    title: "AI & Cloud / DevOps",
+    icon: Cloud,
     accent: "violet",
-    featured: true,
-    desc: "This site — a modular, motion-rich developer portfolio built with React, Tailwind CSS v4 and Framer Motion.",
-    longDesc:
-      "A ground-up rebuild of my personal site. Content lives in a single data file, components are split into layout, section and UI layers, and every interaction respects reduced-motion preferences.",
-    highlights: ["Data-driven content", "Bento project grid", "Spring-based micro-interactions"],
-    tech: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
-    github: "https://github.com/SanskritiDevOps/MyPortfolio",
-    live: "",
-  },
-  // TODO: the projects below are sample entries — replace them with your own work.
-  {
-    title: "TaskFlow",
-    category: "Full Stack",
-    year: "2025",
-    accent: "cyan",
-    featured: false,
-    desc: "A Kanban-style task manager with drag-and-drop boards, real-time sync and team workspaces.",
-    longDesc:
-      "TaskFlow lets small teams organise work across boards and columns. Changes sync instantly between collaborators and state is managed with a lightweight store.",
-    highlights: ["Real-time sync", "Drag & drop boards", "Team workspaces"],
-    tech: ["React", "Zustand", "Tailwind CSS", "Firebase"],
-    github: "",
-    live: "",
+    blurb: "Shipping, automating and integrating AI.",
+    items: ["Google Gemini API", "Ollama", "Docker", "GitHub Actions", "Vercel", "Render", "Neon"],
   },
   {
-    title: "Library Manager",
-    category: "Systems / Backend",
-    year: "2025",
+    title: "Testing & Tools",
+    icon: FlaskConical,
     accent: "emerald",
-    featured: false,
-    desc: "A Java application for managing books, members and loans backed by a relational database.",
-    longDesc:
-      "Models books, members and loans with clean object-oriented design and persists everything through SQL with input validation and search.",
-    highlights: ["OOP domain model", "SQL persistence", "Search & reports"],
-    tech: ["Java", "SQL", "JDBC"],
-    github: "",
-    live: "",
-  },
-  {
-    title: "Weather Glance",
-    category: "Frontend",
-    year: "2024",
-    accent: "cyan",
-    featured: false,
-    desc: "A clean weather dashboard with city search, 5-day forecast and adaptive theming.",
-    longDesc:
-      "Fetches live forecasts from a public weather API, caches recent searches and adapts its colour palette to current conditions.",
-    highlights: ["Live API data", "Recent-search cache", "Fully responsive"],
-    tech: ["JavaScript", "HTML", "CSS", "REST API"],
-    github: "",
-    live: "",
+    blurb: "Keeping code correct and the workflow smooth.",
+    items: ["Vitest", "Git", "GitHub", "VS Code", "Postman"],
   },
 ];
 
-/* Competitive Programming section.
-   Any stat with an empty value is hidden, and the LeetCode difficulty bar only
-   shows once all three numbers are filled in. `accent` ∈ amber | violet | cyan | emerald. */
+/* Flagship projects. `repo` matches the GitHub repo name, used to show live stars and to
+   keep it out of the "Latest from GitHub" list. Cover: `image`, or `snippet` for a code card. */
+export const featuredProjects = [
+  {
+    slug: "tripzy",
+    repo: "Tripzy",
+    title: "Tripzy",
+    tagline: "Real-time group trip planner",
+    category: "Full Stack · Real-time · AI",
+    accent: "cyan",
+    image: "/projects/tripzy.webp",
+    oneLiner:
+      "A real-time collaborative trip planner where groups vote on places, plan days with AI and split expenses, built with React, Node.js, Socket.IO, PostgreSQL and Gemini.",
+    description:
+      "Tripzy is a full-stack web app where friends plan a trip together in one shared workspace: collecting places on a map, voting on them, building a day-by-day itinerary, splitting expenses and sharing a packing list. Every change appears instantly on everyone's screen.",
+    metrics: [
+      { value: "~180", label: "automated tests" },
+      { value: "Live", label: "Socket.IO sync" },
+      { value: "AI", label: "Gemini itineraries" },
+    ],
+    features: [
+      {
+        title: "Live collaboration",
+        text: "Socket.IO rooms tell each member's app which part of the trip changed, so data stays consistent without page reloads, and \"who's online\" indicators show who's there.",
+      },
+      {
+        title: "AI itinerary planning",
+        text: "The server groups places by distance and estimates travel times, then Google Gemini decides the order, meal timing and tips. Every AI answer is validated and repaired on the server, with a route-based fallback, so planning always works.",
+      },
+      {
+        title: "Expense splitting",
+        text: "Equal, exact or percentage splits calculated in whole paise, plus a \"settle up\" that clears all debts in the fewest payments.",
+      },
+      {
+        title: "Roles & security",
+        text: "Team leader and member permissions enforced on the server, rotating refresh tokens, email invites with expiring links, and Google sign-in.",
+      },
+      {
+        title: "Quality",
+        text: "About 180 automated tests, including API tests against a real PostgreSQL database. Deployed on free hosting: Vercel, Render and Neon.",
+      },
+    ],
+    tech: ["React", "Vite", "Tailwind CSS", "Zustand", "Node.js", "Express", "Socket.IO", "PostgreSQL", "Prisma", "Gemini API", "OpenStreetMap", "Vitest"],
+    live: "https://tripzy-lovat.vercel.app",
+    github: "https://github.com/SanskritiDevOps/Tripzy",
+  },
+  {
+    slug: "llmux",
+    repo: "LLMux",
+    title: "LLMux",
+    tagline: "One API for every LLM",
+    category: "Backend · AI Infrastructure",
+    accent: "violet",
+    snippet: [
+      ["$ ", "curl -X POST /v1/chat \\"],
+      ["  ", "-H \"Authorization: Bearer llmux_••••\" \\"],
+      ["  ", "-d '{ \"model\": \"fast\", \"stream\": true,"],
+      ["  ", "      \"messages\": [{ \"role\": \"user\", … }] }'"],
+      ["", ""],
+      ["← ", "event: start  { provider: \"gemini\" }"],
+      ["← ", "event: delta  { text: \"Hello\" }"],
+      ["← ", "event: end    { tokens: 128, costMicros: 42 }"],
+    ],
+    oneLiner:
+      "A self-hosted LLM gateway that gives apps one request format, one API key and one dashboard for every AI model.",
+    description:
+      "Every LLM provider has its own API: different request shapes, different streaming formats, different errors. Teams end up writing separate code for each one, rewriting it whenever they switch models, and going down whenever a provider does. LLMux sits between apps and the providers and removes that problem. An app sends one standard request, changes only the model field, and LLMux handles everything else.",
+    metrics: [
+      { value: "4", label: "LLM providers" },
+      { value: "1", label: "unified endpoint" },
+      { value: "SSE + WS", label: "live streaming" },
+    ],
+    features: [
+      {
+        title: "One API, four providers",
+        text: "OpenAI, Anthropic, Google Gemini and local Ollama models, all behind a single POST /v1/chat endpoint.",
+      },
+      {
+        title: "Model aliases",
+        text: "Clients ask for \"fast\" or \"smart\", and the server decides which real model answers, so models can be swapped without any client change.",
+      },
+      {
+        title: "Live streaming",
+        text: "Server-Sent Events and WebSocket. Every provider's stream format is turned into the same start, delta and end events, and cancelling the stream also stops the provider request.",
+      },
+      {
+        title: "Built to survive outages",
+        text: "Retries with exponential backoff and jitter, automatic fallback to backup models only before the first token is sent, and a circuit breaker for each provider.",
+      },
+      {
+        title: "Cost control & tracking",
+        text: "A Redis response cache and per-key token-bucket rate limiting run as an atomic Lua script. Every request is logged with tokens, latency, cost in exact integer micro-dollars and the money the cache saved.",
+      },
+      {
+        title: "Secure by design",
+        text: "Gateway keys are stored only as hashes and shown once, provider keys never leave the server, credentials are hidden in all logs and prompts aren't stored.",
+      },
+      {
+        title: "React dashboard",
+        text: "Usage, cost and latency charts (p50 and p95), a request log, key management, provider health, and a playground that streams two models side by side with latency and cost under each.",
+      },
+    ],
+    tech: ["Node.js", "Express", "WebSocket", "Zod", "PostgreSQL", "Prisma", "Redis", "React", "Vite", "Tailwind CSS", "TanStack Query", "Recharts", "Vitest", "Docker", "GitHub Actions"],
+    live: "",
+    github: "https://github.com/SanskritiDevOps/LLMux",
+  },
+];
+
+/* Static copy for the Competitive Programming section (live stats come from profileConfig). */
 export const competitiveProgramming = {
-  totalSolved: 400, // displayed as "400+"
   summary:
     "Consistent DSA practice across LeetCode and CodeChef — sharpening problem-solving, complexity analysis and clean implementation under time pressure.",
   note: "", // optional one-liner under the cards, e.g. "Regularly competing in weekly contests"
-  // TODO: adjust to the topics you're strongest in.
   topics: [
     "Arrays & Strings",
     "Hashing",
     "Two Pointers",
     "Binary Search",
-    "Recursion & Backtracking",
-    "Trees & Graphs",
-    "Dynamic Programming",
     "Greedy",
-  ],
-  profiles: [
-    {
-      platform: "LeetCode",
-      short: "LC",
-      accent: "amber",
-      handle: "", // TODO: your LeetCode username
-      url: "", // TODO: https://leetcode.com/u/<username>/
-      stats: [
-        { label: "Problems solved", value: "" }, // TODO e.g. "300+"
-        { label: "Contest rating", value: "" }, // TODO e.g. "1650"
-        { label: "Max streak", value: "" }, // TODO e.g. "100 days"
-      ],
-      breakdown: { easy: null, medium: null, hard: null }, // TODO e.g. { easy: 150, medium: 130, hard: 20 }
-    },
-    {
-      platform: "CodeChef",
-      short: "CC",
-      accent: "violet",
-      handle: "", // TODO: your CodeChef username
-      url: "", // TODO: https://www.codechef.com/users/<username>
-      stats: [
-        { label: "Rating", value: "" }, // TODO e.g. "1600"
-        { label: "Stars", value: "" }, // TODO e.g. "3★"
-        { label: "Problems solved", value: "" }, // TODO e.g. "100+"
-      ],
-    },
+    "Recursion & Backtracking",
+    "Trees",
+    "Graphs",
+    "Dynamic Programming",
   ],
 };
 
 /* Timeline for the Journey section. `type` picks the icon. */
 export const journey = [
-  // TODO: replace with your real education and experience.
   {
     type: "education",
-    title: "B.Tech — Computer Science",
-    org: "Your University",
-    period: "2023 — Present",
-    desc: "Coursework in data structures, algorithms, DBMS and object-oriented programming in Java.",
+    title: "B.Tech — Computer Science And Engineering",
+    org: "Madan Mohan Malaviya University Of Technology",
+    period: "2024 — Present",
+    desc: "Coursework in data structures and algorithms, DBMS, Object-oriented programming in Java, Computer Networks and Operating System.",
     tags: ["DSA", "OOP", "DBMS"],
   },
   {
     type: "experience",
-    title: "Independent Developer",
-    org: "Personal & freelance projects",
+    title: "Club, Hackathon & Personal Projects",
+    org: "University clubs · Hackathons · Independent work",
     period: "2024 — Present",
-    desc: "Designing and shipping web projects end to end — from Figma mockups to deployed React apps on Vercel.",
-    tags: ["React", "Tailwind", "Vercel"],
+    desc: "Building with teams in university clubs and at hackathons, and on my own — taking ideas from a rough plan to deployed, tested apps like Tripzy and LLMux.",
+    tags: ["Hackathons", "Team projects", "Full-stack"],
   },
 ];
 

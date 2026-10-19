@@ -64,9 +64,9 @@ function RotatingRole() {
 }
 
 const FLOATING_CHIPS = [
-  { label: "React", className: "left-0 top-[22%] text-cyan-200 border-cyan-400/30", delay: 0 },
-  { label: "Java", className: "right-0 top-[38%] text-violet-200 border-violet-400/30", delay: 1.2 },
-  { label: "Tailwind", className: "left-[6%] top-[58%] text-emerald-200 border-emerald-400/30", delay: 0.6 },
+  { label: profile.heroChips[0], className: "left-0 top-[22%] text-cyan-200 border-cyan-400/30", delay: 0 },
+  { label: profile.heroChips[1], className: "right-0 top-[38%] text-violet-200 border-violet-400/30", delay: 1.2 },
+  { label: profile.heroChips[2], className: "left-[6%] top-[58%] text-emerald-200 border-emerald-400/30", delay: 0.6 },
 ];
 
 export default function Hero() {
