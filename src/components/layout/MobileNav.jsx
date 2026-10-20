@@ -52,7 +52,7 @@ export default function MobileNav({ open, onClose, active }) {
             <span className="flex items-center gap-2 font-mono text-[11px] text-emerald-300">
               <StatusDot /> Open to work
             </span>
-            <Button href={profile.resumeUrl} size="sm" download>
+            <Button href={profile.resumeUrl} size="sm" download={profile.resumeFileName}>
               <Download size={14} /> Resume
             </Button>
           </div>

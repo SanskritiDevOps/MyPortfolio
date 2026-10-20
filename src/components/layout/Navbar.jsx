@@ -69,7 +69,7 @@ export default function Navbar({ active }) {
         </ul>
 
         <div className="hidden md:block">
-          <Button href={profile.resumeUrl} size="sm" variant="secondary" download>
+          <Button href={profile.resumeUrl} size="sm" variant="secondary" download={profile.resumeFileName}>
             <Download size={14} className="transition-transform group-hover:translate-y-0.5" />
             Resume
           </Button>

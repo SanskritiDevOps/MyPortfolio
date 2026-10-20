@@ -30,7 +30,8 @@ export const profile = {
     "Turning creativity into code to build products that scale, perform and make an impact.",
   status: "Available for internships & projects",
   email: "sanskritichandel2005@gmail.com",
-  resumeUrl: "/resume.pdf", // TODO: put resume.pdf inside /public
+  resumeUrl: "/resume.pdf", // file in /public — replace it to update your resume
+  resumeFileName: "Sanskriti_Singh_Resume.pdf", // name it saves as when downloaded
   photo: "/sanskriti-portrait.webp", // transparent cutout, shown in the hero
   photoSize: { width: 864, height: 1126 }, // intrinsic size of the file above
   greeting: "Hi, There!",
